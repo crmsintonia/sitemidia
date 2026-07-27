@@ -34,6 +34,7 @@
   body.om-normal [data-panel] { position: relative !important; inset: auto !important; opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; min-height: 100vh; }
   body.om-normal [data-anim] { transform: none !important; opacity: 1 !important; }
   body.om-normal #om-stage { position: static !important; overflow: visible !important; height: auto !important; }
+  [data-panel] { grid-template-columns: minmax(0, 1fr); }
 
   @media (max-width: 760px) {
     header > div { flex-wrap: wrap !important; justify-content: space-between !important; padding: 10px 16px 8px !important; gap: 10px !important; }
@@ -46,6 +47,9 @@
 
     section[data-panel] { padding: 136px 20px 28px !important; }
     section[data-panel] [style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 16px !important; }
+    section[data-panel] [style*="grid-template-columns"] > * { min-width: 0 !important; }
+    section[data-panel] [style*="display: flex"] > * { min-width: 0 !important; }
+    section[data-screen-label="14 Contato"] [style*="gap: 26px"] { flex-wrap: wrap !important; row-gap: 8px !important; }
     section[data-panel] [style*="perspective"] { perspective: none !important; }
     .om-mock { transform: none !important; }
     section[data-screen-label="12 Time"] [style*="aspect-ratio"] { aspect-ratio: 4/3 !important; max-height: 60vh !important; }
