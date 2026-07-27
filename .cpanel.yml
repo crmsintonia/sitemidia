@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=$HOME/public_html/
+    - export DEPLOYPATH=$HOME/MIDIA031.COM.BR/
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -f index.html $DEPLOYPATH 2>/dev/null || true
     - /bin/bash -c 'shopt -s nullglob; for f in *.css *.js; do cp -f "$f" "$DEPLOYPATH"; done'
